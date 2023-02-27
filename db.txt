@@ -1,0 +1,6 @@
+Петр|petr@mail.ru|10|Круто
+Максим|maskim@mail.ru|5|хороший сайт
+Дима|aaa@mail.ru|1|Ужасный сайт
+Дима|aaa@mail.ru|1|Плохо
+Максим|maskim@mail.ru|1|Ужасно
+Максим|maskim@mail.ru|10| Круто

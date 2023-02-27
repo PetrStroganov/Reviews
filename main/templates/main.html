@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="container">
+    <div class="form">
+        <h1>
+            Оставьте ваш отзыв
+        </h1>
+        <form method="POST">
+            {% csrf_token %} 
+            <!-- <p>
+                <label for="name">
+                    Имя
+                </label>
+                <input type="text" id="name" name="name">
+            </p>
+            <p>
+                <label for="email">
+                    Почта
+                </label>
+                <input type="email" id="email" name="email">
+            </p>
+            <p>
+                <label for="rating">
+                    Рейтинг
+                </label>
+                <input type="number" id="rating" name="rating">
+            </p>
+            <p>
+                <label for="comment">
+                    Ваш коментарий
+                </label>
+                <textarea id="comment" name="comment">
+                </textarea>
+            </p> -->
+            {{ form.as_p }}
+            <button class="styled">
+                Отправить отзыв
+            </button>
+        </form>
+    </div>
+    <div class="reviews">
+        <h1>
+            Все отзывы
+        </h1>
+        <ul>
+            {% for review in reviews %}
+                <li class="review">
+                    <p>
+                        {{review.name}}
+                        {{review.email}} <img src="{% static 'images/free-icon-rubbish-bin-1400339.png' %}">
+                    </p>
+                    <p>
+                        Рейтинг отправителя: {{review.rating}}/10
+                    </p>
+                    {% if review.comment and review.comment|length > 0 %}
+                        <p>
+                           
+                            Сообщение отправителя: {{review.comment}}
+                        </p>
+                    {% endif %}
+                    <p class="likes">
+                        <img src="{% static 'images/thumb-up.png' %}">
+                        {{review.like_count}}
+                    </p>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+{% endblock %}

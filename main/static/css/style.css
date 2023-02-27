@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap');
+.container {
+    width: 1200px;
+    margin: auto;
+}
+body{
+    background-color: #2c3e50;
+    color: white;
+}
+*{
+    font-family: 'Play', sans-serif;
+}
+input, textarea{
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 10px;
+    border: 2px solid #16a085;
+    font-size: 18px;
+}
+textarea{
+    resize: none;
+    height: 200px;
+}
+.styled {
+    border: 0;
+    line-height: 2.5;
+    padding: 0 20px;
+    font-size: 1rem;
+    text-align: center;
+    color: #fff;
+    text-shadow: 1px 1px 1px #000;
+    border-radius: 10px;
+    background-color: #27ae60;
+    background-image: linear-gradient(to top left,
+                                      rgba(0, 0, 0, .2),
+                                      rgba(0, 0, 0, .2) 30%,
+                                      rgba(0, 0, 0, 0));
+    box-shadow: inset 2px 2px 3px rgba(255, 255, 255, .6),
+                inset -2px -2px 3px rgba(0, 0, 0, .6);
+}
+
+.styled:active {
+    box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6),
+                inset 2px 2px 3px rgba(0, 0, 0, .6);
+}
+.review{
+    list-style-type: none;
+    border: 2px solid #16a085;
+    margin-top: 5px;
+    padding: 10px;
+    border-radius: 20px;
+    text-shadow: 1px 1px 1px #000;
+    background-color: #1abc9c8f;
+    position: relative;
+}
+.review img{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 0px;
+    top: 10px;
+}
+.likes {
+    position: absolute;
+    bottom: 10px;
+    font-size: 20px;
+    right: 5px;
+    display: flex;
+    align-items: center;
+}
+.likes img{
+    position: static;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
